@@ -53,9 +53,9 @@ class CountryListView extends StatelessWidget {
       padding: EdgeInsets.only(left: 15, right: 15, bottom: 15),
       child: ListTile(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        tileColor: AppColor.containbgcolor,
+        tileColor: AppColor.iconbgcolor.withOpacity(0.6),
+        
         onTap: () {
-          print("js");
           Get.to(NewsGridView(
             newslist: countryData.newsList!,
             selctedcountryIndex: index,
@@ -72,7 +72,7 @@ class CountryListView extends StatelessWidget {
         ),
         title: Text(
           countryData.countryName.toString(),
-          style: TextStyle(fontFamily: AppFont.medium, fontSize: 15),
+          style: TextStyle(fontFamily: AppFont.semibold, fontSize: 15),
         ),
       ),
     );
