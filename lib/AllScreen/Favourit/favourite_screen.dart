@@ -21,37 +21,48 @@ class _FavouritScreenViewState extends State<FavouritScreenView> {
 
   @override
   Widget build(BuildContext context) {
+    setState(() {});
     return Scaffold(
       appBar: appbar(),
       key: textGlobalKey,
       body: SingleChildScrollView(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GetBuilder<CountryController>(
               builder: (controller) {
-                return GridView.builder(
-                    padding: EdgeInsets.only(
-                        right: 15, left: 15, top: 15, bottom: 15),
-                    itemCount: controller.favouriteNewslist.value.length,
-                    shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      mainAxisSpacing: 15,
-                      crossAxisSpacing: 15,
-                    ),
-                    itemBuilder: (_, ind) {
-                      var curruntObject =
-                          controller.favouriteNewslist.value[ind];
-                      return curruntObject.newsId == ""
-                          ? Text("No Data In Favourites")
-                          : NewsCard(
-                              newslist: curruntObject,
-                              selctedcountryIndex: curruntObject.countryId!,
-                              mainindex: curruntObject.newsId!,
-                              notifyParent: refresh,
-                            );
-                    });
+                return controller.favouriteNewslist.isEmpty
+                    ? Center(
+                        child: Text(
+                          "No Data In Favourites",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontFamily: AppFont.semibold,
+                            color: AppColor.themeblackcolor,
+                          ),
+                        ),
+                      )
+                    : GridView.builder(
+                        padding: EdgeInsets.only(
+                            right: 15, left: 15, top: 15, bottom: 15),
+                        itemCount: controller.favouriteNewslist.value.length,
+                        shrinkWrap: true,
+                        physics: NeverScrollableScrollPhysics(),
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          mainAxisSpacing: 15,
+                          crossAxisSpacing: 15,
+                        ),
+                        itemBuilder: (_, ind) {
+                          var curruntObject =
+                              controller.favouriteNewslist.value[ind];
+                          return NewsCard(
+                            newslist: curruntObject,
+                            selctedcountryIndex: curruntObject.countryId!,
+                            mainindex: curruntObject.newsId!,
+                            notifyParent: refresh,
+                          );
+                        });
               },
             ),
           ],

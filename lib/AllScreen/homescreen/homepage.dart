@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, unused_import, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, prefer_interpolation_to_compose_strings, unused_element, deprecated_member_use, prefer_final_fields, avoid_print, unused_field, curly_braces_in_flow_control_structures, unused_local_variable
+// ignore_for_file: prefer_const_constructors, unused_import, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, prefer_interpolation_to_compose_strings, unused_element, deprecated_member_use, prefer_final_fields, avoid_print, unused_field, curly_braces_in_flow_control_structures, unused_local_variable, use_super_parameters
 
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
@@ -69,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: AppColor.bgcolor,
       centerTitle: true,
       title: Text(
-        'Home Translate',
+        'Translate',
         style: TextStyle(
           color: Colors.black,
           fontFamily: AppFont.semibold,

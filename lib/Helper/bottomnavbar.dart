@@ -14,22 +14,22 @@ class PersistenBottomNavBar extends StatelessWidget {
         PersistentTabConfig(
           screen: HomeScreen(),
           item: ItemConfig(
-            icon: Icon(Icons.home_filled),
+            icon: Image.asset(AssetsPath.home + 'home.png'),
             title: "Home",
           ),
         ),
         PersistentTabConfig(
           screen: CountryListView(),
           item: ItemConfig(
-            icon: Icon(Icons.search),
-            title: "Messages",
+            icon: Image.asset(AssetsPath.home + 'NEWS.png'),
+            title: "News",
           ),
         ),
         PersistentTabConfig(
           screen: FavouritScreenView(),
           item: ItemConfig(
-            icon: Icon(Icons.settings),
-            title: "Settings",
+            icon: Image.asset(AssetsPath.home + 'unfavorite.png'),
+            title: "Favourites",
           ),
         ),
       ];
@@ -37,11 +37,14 @@ class PersistenBottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) => PersistentTabView(
         tabs: _tabs(),
+        navBarHeight: 55,
         navBarBuilder: (navBarConfig) => Style10BottomNavBar(
           navBarConfig: navBarConfig,
           navBarDecoration: NavBarDecoration(
-            color: AppColor.bgcolor,
-          ),
+              color: AppColor.iconbgcolor,
+              boxShadow: [
+                BoxShadow(color: Colors.grey, spreadRadius: 5, blurRadius: 10)
+              ]),
         ),
       );
 }
