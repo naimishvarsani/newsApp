@@ -21,7 +21,7 @@ class PersistenBottomNavBar extends StatelessWidget {
         PersistentTabConfig(
           screen: CountryListView(),
           item: ItemConfig(
-            icon: Image.asset(AssetsPath.home + 'NEWS.png'),
+            icon: Image.asset(AssetsPath.home + 'newsIcon.jpg'),
             title: "News",
           ),
         ),
@@ -41,7 +41,7 @@ class PersistenBottomNavBar extends StatelessWidget {
         navBarBuilder: (navBarConfig) => Style10BottomNavBar(
           navBarConfig: navBarConfig,
           navBarDecoration: NavBarDecoration(
-              color: AppColor.iconbgcolor,
+              color: AppColor.bgcolor,
               boxShadow: [
                 BoxShadow(color: Colors.grey, spreadRadius: 5, blurRadius: 10)
               ]),
