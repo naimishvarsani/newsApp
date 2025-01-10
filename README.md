@@ -1,16 +1,16 @@
 # news_app
 
-A new Flutter project.
 
-## Getting Started
+## Some screenshots
 
-This project is a starting point for a Flutter application.
+|                                                        |                                                        |
+| ------------------------------------------------------ | -------------------------------------------------------|
+| <img src="ss/Screenshot_1736529848.png"  width="300"/> | <img src="ss/Screenshot_1736529886.png"  width="300"/> |
+| <img src="ss/Screenshot_1736529881.png" width="300"/>  | <img src="ss/Screenshot_1736529889.png" width="300"/>  |
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### :heart: Found this project useful?
+
+If you found this project useful, then please consider giving it a :star: on Github and sharing it with your friends via social media.
