@@ -43,6 +43,7 @@ dependencies:
   translator: ^0.1.7
   flutter_tts:
   smooth_page_indicator:
+  flutter_native_splash:
 
 dev_dependencies:
   flutter_test:
@@ -110,3 +111,6 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_native_splash:
+  color: "#ffffff"
+  image: "assets/intro/splash.gif"

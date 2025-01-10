@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 3), () async {
+    Timer(Duration(seconds: 5), () async {
       var isIntroduction = await Preference.preference
           .getBool(key: PrefernceKey.isIntroductionScreenLoaded, defVal: false);
       if (isIntroduction == true) {

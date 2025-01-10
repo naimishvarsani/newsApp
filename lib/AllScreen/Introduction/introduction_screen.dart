@@ -44,28 +44,20 @@ class IntroductionScreenView extends StatelessWidget {
           children: [
             pageView(
               "Welcome To NEWS Translate App",
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been",
               "Group 165.png",
             ),
             pageView(
-                "We Provide Our Service More Then 10 Country",
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been",
-                "Group 166.png"),
+                "We Provide Our Service More Then 10 Country", "Group 166.png"),
+            pageView("Translate Over 10 Languages", "Group 167.png"),
             pageView(
-                "Translate Over 10 Languages",
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been",
-                "Group 167.png"),
-            pageView(
-                "Powerful Text Translate to Voice Feature",
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been",
-                "Group 170.png"),
+                "Powerful Text Translate to Voice Feature", "Group 170.png"),
           ],
         ),
       ),
     );
   }
 
-  Widget pageView(String text, String text2, String imgurl) {
+  Widget pageView(String text, String imgurl) {
     return Container(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -91,15 +83,6 @@ class IntroductionScreenView extends StatelessWidget {
                         fontSize: 22,
                         fontFamily: AppFont.semibold,
                       )),
-                ),
-                SizedBox(height: 25),
-                Container(
-                  width: Get.width - 100,
-                  child: Text(
-                    text2,
-                    style: TextStyle(),
-                    textAlign: TextAlign.center,
-                  ),
                 ),
               ],
             ),
@@ -135,7 +118,7 @@ class IntroductionScreenView extends StatelessWidget {
                   Preference.preference
                       .saveBool(PrefernceKey.isIntroductionScreenLoaded, true);
 
-                  Get.to(PersistenBottomNavBar());
+                  Get.offAll(PersistenBottomNavBar());
                 } else {
                   _controller.pageController.nextPage(
                       duration: Duration(milliseconds: 500),
