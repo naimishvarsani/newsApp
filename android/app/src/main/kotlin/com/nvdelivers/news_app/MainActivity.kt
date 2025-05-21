@@ -1,4 +1,4 @@
-package com.nvdelivers.newswithtts
+package com.nvdelivers.news_app
 
 import io.flutter.embedding.android.FlutterActivity
 
